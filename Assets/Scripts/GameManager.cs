@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour {
 
     // 플레이어 캐릭터가 사망시 게임 오버를 실행하는 메서드
     public void OnPlayerDead() {
-        
+        isGameover = true;
+        gameoverUI.SetActive(true);
     }
 }
