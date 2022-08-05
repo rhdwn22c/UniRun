@@ -41,7 +41,11 @@ public class GameManager : MonoBehaviour {
 
     // 점수를 증가시키는 메서드
     public void AddScore(int newScore) {
-        
+        // 게임오버가 아니라면
+        if(!isGameover) {
+            score += newScore;
+            scoreText.text = "Score : " + score;
+        }
     }
 
     // 플레이어 캐릭터가 사망시 게임 오버를 실행하는 메서드
